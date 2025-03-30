@@ -141,6 +141,7 @@ If something goes wrong, check:
  
 ## 🙋‍♂️ Support
  
-For updates or assistance, contact your team’s Hammed administrator or VBA support resource.
- # Hammed
-Hammed is a Whitelist oriented Spam tool for Outlook
+For updates or assistance, try debugging with your favorite LLM.  Or go to the project GitHub and request help.
+
+If you like using this tool, there is no cost but you can buy me a cup of coffee: https://buymeacupofcoffee/goldenchimp
+
