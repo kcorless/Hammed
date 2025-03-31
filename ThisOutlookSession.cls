@@ -54,6 +54,13 @@ Private Sub InboxItems_ItemAdd(ByVal item As Object)
     Set mail = EmailHandler.MoveMail(mail, "Hammed")
     mail.UnRead = False
     mail.Save
+    
+    
+    ' Skip reply if sender address begins with noreply or no-reply
+    If LCase(Left(senderEmail, 7)) = "noreply" Or LCase(Left(senderEmail, 8)) = "no-reply" Then
+        Logging.LogDebug "No reply drafted or sent because senderEmail begins with noreply/no-reply: ", senderEmail
+        Exit Sub
+    End If
 
     ' Create reply message
     Dim replyMail As Outlook.mailItem
@@ -67,7 +74,7 @@ Private Sub InboxItems_ItemAdd(ByVal item As Object)
         Logging.LogDebug "Auto-reply sent to: ", senderEmail
     Else
         replyMail.Save
-        Logging.LogDebug "SAFE_MODE is active, reply saved to Drafts"
+        Logging.LogDebug "DONT_AUTO_SEND_REPLY_MODE is TRUE, reply saved to Drafts"
     End If
 
 ExitPoint:
