@@ -62,7 +62,7 @@ D:\Users\<your-username>\AppData\Local\Hammed\
  
 These include:
  
-- `whitelist.txt` — List of approved domains (one per line)
+- `whitelist.txt` — List of approved domains (one per line). Note that the string in whitelist.txt is search for in your domain.  So if you have "goo" in the whitelist, it will whitelist google.com and googly.com and abcgoo.net
 - `reply.txt` — Standard reply body for auto-responses
 - `secret.txt` — Optional keyword to allow a message through
 - `Hammed.ini` — Configuration file for the tool
@@ -73,6 +73,14 @@ These include:
 NO_AUTO_SEND_REPLY_MODE=True
 DEBUG_MODE=True
 MSGBOX_MODE=False
+```
+
+ ### `whitelist.txt` Sample Configuration
+ 
+```
+gmail.com
+united.com
+apple
 ```
  
 ---
@@ -89,6 +97,7 @@ MSGBOX_MODE=False
    - Marked as **read**
    - A reply is optionally sent (or saved to Drafts, depending on config)
    - A full audit log is written to `HamDebugLog.txt`
+   - If it **should** be in your whitelist but it is not, see the AddWL macro below
  
 ### Logging
  
@@ -123,7 +132,7 @@ The `AddWL` macro adds the domain of the currently selected email's sender to th
 5. (Optional) Click **Modify...** to choose an icon and friendly name
 6. Click OK
  
-Now you can add senders to the whitelist with **one click**.
+Now you can add senders to the whitelist with **one click** after the desired email is selected.
  
 ---
  
