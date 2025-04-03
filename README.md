@@ -41,7 +41,7 @@ After importing, ensure the module names (in the Properties window) match the fi
 ### 4. Trust Access to the VBA Project
  
 - Go to **File > Options > Trust Center > Trust Center Settings > Macro Settings**
-- Check **"Trust access to the VBA project object model"**
+- Check **"Enable all macros (not recommended...)"**
 - Click OK
  
 ### 5. Restart Outlook
