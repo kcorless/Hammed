@@ -5,6 +5,8 @@
 ## 📘 Overview
  
 **Hammed** is a custom-built Outlook automation tool that helps manage and automatically respond to unsolicited emails. It works by maintaining a **whitelist of approved domains**, and optionally checking for a **secret word** in the subject line to bypass the filter. Emails not meeting those criteria are automatically moved to a special folder (`Hammed`), marked as read, and optionally replied to with a standard response.
+
+**NOTE:** Hammed will only work on Microsoft Windows Outlook environment.  Sorry Mac users.
  
 ---
  
